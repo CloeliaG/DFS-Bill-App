@@ -1,0 +1,237 @@
+[
+  {
+    "_id": "3f3b4571-a84f-4c04-abaa-d6a1fef3b0f0",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "bills",
+    "url": "{{url}}/bills",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-06T11:55:42.747Z",
+    "modified": "2023-04-06T12:02:36.204Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "d4fd4ef9-693e-4bc3-97ea-60e5e55d5dd9",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "bills",
+    "url": "{{url}}/bills",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-04-06T11:58:46.810Z",
+    "modified": "2023-04-06T13:00:11.021Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"billnum\": 123,\n  \"date\": \"02/03/2023\",\n  \"description\": \"Facture de test\",\n  \"client\": {\n    \"idclient\": 1,\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\"\n  },\n  \"prestations\": [{\n    \"description\": \"Test description\",\n    \"qty\": 2,\n    \"price\": 450\n  },\n  {\n    \"description\": \"TOTO\",\n    \"qty\": 2,\n    \"price\": 950\n  }],\n  \"discount\": 0,\n  \"paid\": 0,\n  \"totalHT\": 2800,\n  \"tva\": 20,\n  \"totalTTC\": 3360\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json._id",
+        "action": "setto",
+        "value": "{{bill_id}}"
+      }
+    ]
+  },
+  {
+    "_id": "22060d0e-6552-4b4a-aa53-a3151e640e1a",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "bills/:id",
+    "url": "{{url}}/bills/{id}",
+    "method": "PATCH",
+    "sortNum": 30000,
+    "created": "2023-04-06T12:04:13.206Z",
+    "modified": "2023-04-06T13:34:04.126Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{bill_id}}",
+        "isPath": true
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"billnum\": 3849348034893489,\n  \"date\": \"10/03/2023\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "4cd8297a-1768-4f03-88bb-3e8a39fde18e",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "bills/:id",
+    "url": "{{url}}/bills/{id}",
+    "method": "DELETE",
+    "sortNum": 40000,
+    "created": "2023-04-06T12:05:48.054Z",
+    "modified": "2023-04-06T13:05:32.592Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{bill_id}}",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "019ab914-ec53-4fa6-a5ff-483f77eac783",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "bills/:id",
+    "url": "{{url}}/bills/{id}",
+    "method": "GET",
+    "sortNum": 15000,
+    "created": "2023-04-06T12:06:27.085Z",
+    "modified": "2023-04-06T13:55:14.405Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{bill_id}}",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "92af8811-0553-4c4f-9721-43d43c128a07",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "customers",
+    "url": "{{url}}/customers",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-04-07T15:10:25.191Z",
+    "modified": "2023-04-07T15:10:43.301Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "f2c37d61-f35f-4556-ba30-1ff9c2edebd4",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "customers/:id",
+    "url": "{{url}}/customers/{id}",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-04-07T15:11:04.052Z",
+    "modified": "2023-04-07T15:14:21.722Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{customer_id}}",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "245fa1df-086c-4072-9b5f-aa67a07c3e17",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "customers",
+    "url": "{{url}}/customers",
+    "method": "POST",
+    "sortNum": 70000,
+    "created": "2023-04-07T15:11:13.131Z",
+    "modified": "2023-04-07T18:39:18.537Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"dateAdded\": \"12/02/2021\",\n  \"role\": \"Directeur\",\n  \"phone\": \"0387452013\",\n  \"email\": \"0387452013\",\n  \"company\": \"Orange\",\n  \"address\": {\n    \"address1\": \"2 rue de la poupée qui dort\",\n    \"address2\": \"-\",\n    \"zipCode\": \"57000\",\n    \"city\": \"Metz\",\n    \"country\": \"France\"\n  }\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json._id",
+        "action": "setto",
+        "value": "{{customer_id}}"
+      }
+    ]
+  },
+  {
+    "_id": "74340150-e5a3-45ec-8708-77ee98a29d7b",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "bills/:id Copy",
+    "url": "{{url}}/bills/{id}",
+    "method": "PATCH",
+    "sortNum": 35000,
+    "created": "2023-04-07T15:11:17.295Z",
+    "modified": "2023-04-07T15:11:17.295Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{bill_id}}",
+        "isPath": true
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"billnum\": 3849348034893489,\n  \"date\": \"10/03/2023\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "a0859efb-919b-477e-b083-4ea4b232d617",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "customers/:id",
+    "url": "{{url}}/customers/{id}",
+    "method": "PATCH",
+    "sortNum": 80000,
+    "created": "2023-04-07T15:11:22.124Z",
+    "modified": "2023-04-07T17:54:40.375Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{customer_id}}",
+        "isPath": true
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"lastName\": \"EFFV\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "df4c05cd-041a-4290-bc16-f9c9b63ff485",
+    "colId": "e3d8973a-4359-4d73-88a5-4ae8c3438017",
+    "containerId": "",
+    "name": "customers/:id",
+    "url": "{{url}}/customers/{id}",
+    "method": "DELETE",
+    "sortNum": 90000,
+    "created": "2023-04-07T15:11:27.268Z",
+    "modified": "2023-04-07T15:14:42.582Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{customer_id}}",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  }
+]
